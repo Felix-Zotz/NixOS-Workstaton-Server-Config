@@ -13,7 +13,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "Home-Server";
+  networking.hostName = "Workstation-Server";
 
   # Networking with static IP
   networking.useNetworkd = true;
