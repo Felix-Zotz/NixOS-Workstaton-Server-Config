@@ -9,7 +9,7 @@ in
     settings = {
       window-decoration = false;
     };
-  }:
+  };
 
   xdg.configFile."river/init" = {
     executable = true;
