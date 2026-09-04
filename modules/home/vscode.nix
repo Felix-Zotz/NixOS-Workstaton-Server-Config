@@ -37,7 +37,7 @@ in
         extensions = commonExtensions ++ (with pkgs.vscode-extensions; [
           esbenp.prettier-vscode
           tomoki1207.pdf
-          spadin.zmk-tools
+          #spadin.zmk-tools
         ]);
 
         userSettings = commonSettings // {
@@ -60,9 +60,9 @@ in
       APA = {
         extensions = commonExtensions ++ (with pkgs.vscode-extensions; [
           vadimcn.vscode-lldb
-          connor4312.esbuild-problem-matchers
+          #connor4312.esbuild-problem-matchers
           dbaeumer.vscode-eslint
-          ms-vscode.extension-test-runner
+          #ms-vscode.extension-test-runner
           christian-kohler.npm-intellisense
           esbenp.prettier-vscode
           yoavbls.pretty-ts-errors
