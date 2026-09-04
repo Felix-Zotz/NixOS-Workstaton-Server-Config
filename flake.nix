@@ -1,12 +1,32 @@
 {
+  description = "Workstation-Server: server daemons + felix (normal) + gaming user";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    playit-nixos-module.url = "github:pedorich-n/playit-nixos-module";
-  };
-  outputs = { nixpkgs, playit-nixos-module, ... }: {
-    nixosConfigurations."Home-Server" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [ playit-nixos-module.nixosModules.default ./configuration.nix ];
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+    let
+      mkHost = hostname: extraModules: nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/${hostname}
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+          }
+        ] ++ extraModules;
+      };
+    in
+    {
+      nixosConfigurations."Workstation-Server" = mkHost "workstation-server" [ ];
+    };
 }
