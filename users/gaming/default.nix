@@ -13,7 +13,7 @@
       ../../modules/home/gaming.nix
       ../../modules/home/river.nix
       ../../modules/home/neovim.nix
-      ../../modules/home/librewolf.nix
+      ../../modules/home/firefox.nix
     ];
     home.stateVersion = "26.05";
   };
