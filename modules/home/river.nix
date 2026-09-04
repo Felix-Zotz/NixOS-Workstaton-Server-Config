@@ -4,7 +4,12 @@ let
   terminal = "${pkgs.ghostty}/bin/ghostty";
 in
 {
-  home.packages = [ pkgs.ghostty ];
+  programs.ghostty = {
+    enable = true;
+    settings = {
+      window-decoration = false;
+    };
+  }:
 
   xdg.configFile."river/init" = {
     executable = true;
