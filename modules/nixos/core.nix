@@ -24,6 +24,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  environment.systemPackages = with pkgs; [ git ];
+
   services.openssh = {
     enable = true;
     settings = {
