@@ -19,6 +19,7 @@
       ../../modules/home/river.nix
       ../../modules/home/neovim.nix
       ../../modules/home/librewolf.nix
+      ../../modules/home/vscode.nix
     ];
     home.stateVersion = "26.05";
   };
