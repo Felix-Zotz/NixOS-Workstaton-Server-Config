@@ -16,7 +16,7 @@
   home-manager.users.felix = {
     imports = [
       ../../modules/home/shell.nix
-      ../../modules/home/river.nix
+      ../../modules/home/sway.nix
       ../../modules/home/neovim.nix
       ../../modules/home/firefox.nix
       ../../modules/home/vscode.nix

@@ -11,7 +11,7 @@
     imports = [
       ../../modules/home/shell.nix
       ../../modules/home/gaming.nix
-      ../../modules/home/river.nix
+      ../../modules/home/sway.nix
       ../../modules/home/neovim.nix
       ../../modules/home/firefox.nix
     ];

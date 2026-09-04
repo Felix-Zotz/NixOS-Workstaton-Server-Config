@@ -1,7 +1,8 @@
 { pkgs, ... }:
 
 {
-  programs.river-classic.enable = true;
+  programs.sway.enable = true;
+
   services.seatd.enable = true;
 
   xdg.portal = {
