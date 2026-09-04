@@ -7,6 +7,8 @@
     ../../modules/nixos/core.nix
     ../../modules/nixos/gpu.nix
     ../../modules/nixos/server-services.nix
+    ../../modules/nixos/headless-boot.nix
+    ../../modules/nixos/river.nix
 
     ../../users/felix
     ../../users/gaming

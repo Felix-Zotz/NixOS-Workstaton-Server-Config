@@ -4,7 +4,7 @@
   users.users.felix = {
     isNormalUser = true;
     description = "Felix";
-    extraGroups = [ "wheel" "video" "render" ];
+    extraGroups = [ "wheel" "video" "render" "seat" ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO7hjdiYFf4xcm9Me9hmNus1GzSOcyj0VNyGEffSDaRo mobile@localhost" # iPad
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBLfCCh1G0zd8vXgS8aGPZO0ruW+AtAmAznCy1o8CBqI PC-F" # PC (Won't be necessary soon)
@@ -14,7 +14,7 @@
   };
 
   home-manager.users.felix = {
-    imports = [ ../../modules/home/shell.nix ];
+    imports = [ ../../modules/home/shell.nix ../../modules/home/river.nix ];
     home.stateVersion = "26.05";
   };
 }
