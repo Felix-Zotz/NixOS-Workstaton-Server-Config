@@ -14,7 +14,12 @@
   };
 
   home-manager.users.felix = {
-    imports = [ ../../modules/home/shell.nix ../../modules/home/river.nix ];
+    imports = [
+      ../../modules/home/shell.nix
+      ../../modules/home/river.nix
+      ../../modules/home/neovim.nix
+      ../../modules/home/librewolf.nix
+    ];
     home.stateVersion = "26.05";
   };
 }

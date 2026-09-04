@@ -12,6 +12,8 @@
       ../../modules/home/shell.nix
       ../../modules/home/gaming.nix
       ../../modules/home/river.nix
+      ../../modules/home/neovim.nix
+      ../../modules/home/librewolf.nix
     ];
     home.stateVersion = "26.05";
   };
